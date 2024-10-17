@@ -4,15 +4,15 @@ import Header from '../components/Header.vue';
 </script>
 
 <template>
-  <div class="bg-white w-full sm:w-4/5 lg:w-3/5 m-auto rounded-xl shadow-xl shadow-grey-200 mt-10 lg:mt-20">
+  <div class="bg-white w-full sm:w-4/5 lg:w-3/5 xl:w-2/3 m-auto rounded-xl shadow-xl shadow-grey-200 mt-6 sm:mt-10 lg:mt-20">
     <Header />
 
-    <div class="p-4 lg:p-10">
+    <div class="p-4 sm:p-6 lg:p-10">
       <div class="flex flex-col lg:flex-row justify-between items-center mb-6 lg:mb-10 gap-4">
-        <h1 class="text-2xl lg:text-3xl font-bold">Все товары</h1>
-        <div class="flex flex-col sm:flex-row items-center gap-4">
+        <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold">Все товары</h1>
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <select
-            class="py-2 px-3 border border-gray-200 focus:border-gray-400 rounded-md focus:outline-none"
+            class="py-2 px-3 border border-gray-200 focus:border-gray-400 rounded-md focus:outline-none w-full sm:w-auto"
           >
             <option value="name">По названию</option>
             <option value="price">По цене (дешевые)</option>
@@ -31,8 +31,8 @@ import Header from '../components/Header.vue';
         </div>
       </div>
 
-      <!-- Адаптивная сетка -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-10">
+      <!-- Адаптивная сетка карточек -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-10">
         <Card
           title="Печатка мужская с камнями"
           :price="120"
