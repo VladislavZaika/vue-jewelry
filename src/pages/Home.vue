@@ -4,13 +4,13 @@ import Header from '../components/Header.vue';
 </script>
 
 <template>
-  <div class="bg-white w-3/5 m-auto rounded-xl shadow-xl shadow-grey-200 mt-20">
+  <div class="bg-white w-full sm:w-4/5 lg:w-3/5 m-auto rounded-xl shadow-xl shadow-grey-200 mt-10 lg:mt-20">
     <Header />
 
-    <div class="p-10">
-      <div class="flex justify-between items-center mb-10">
-        <h1 class="text-3xl font-bold">Все товары</h1>
-        <div class="flex items-center gap-4">
+    <div class="p-4 lg:p-10">
+      <div class="flex flex-col lg:flex-row justify-between items-center mb-6 lg:mb-10 gap-4">
+        <h1 class="text-2xl lg:text-3xl font-bold">Все товары</h1>
+        <div class="flex flex-col sm:flex-row items-center gap-4">
           <select
             class="py-2 px-3 border border-gray-200 focus:border-gray-400 rounded-md focus:outline-none"
           >
@@ -18,10 +18,10 @@ import Header from '../components/Header.vue';
             <option value="price">По цене (дешевые)</option>
             <option value="price">По цене (дорогие)</option>
           </select>
-          <div class="relative">
+          <div class="relative w-full sm:w-auto">
             <input
               type="text"
-              class="border border-gray-200 rounded-md py-2 pl-10 pr-4 focus:outline-none focus:border-gray-400"
+              class="w-full sm:w-auto border border-gray-200 rounded-md py-2 pl-10 pr-4 focus:outline-none focus:border-gray-400"
               placeholder="Поиск..."
             />
             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -31,7 +31,8 @@ import Header from '../components/Header.vue';
         </div>
       </div>
 
-      <div class="grid grid-cols-4 gap-10">
+      <!-- Адаптивная сетка -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-10">
         <Card
           title="Печатка мужская с камнями"
           :price="120"
