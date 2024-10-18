@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div class="relative flex w-full border border-slate-100 rounded-xl p-2 sm:p-4 gap-2 sm:gap-4">
-    <img :src="img" class="w-12 h-12 sm:w-16 sm:h-16 object-cover" alt="Sneaker" />
+    <img :src="img" class="w-16 h-16" alt="Jewelry" />
     <div class="flex flex-col w-full">
       <p class="text-sm sm:text-base lg:text-lg">{{ title }}</p>
       <div class="flex justify-between mt-2 sm:mt-5">
